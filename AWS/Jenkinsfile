@@ -10,6 +10,7 @@ pipeline {
     stages {
        stage ("Terraform init") {
             steps {
+                sh ("cd AWS/")
                 sh ("terraform init -reconfigure") 
             }
         }
